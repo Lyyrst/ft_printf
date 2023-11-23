@@ -6,7 +6,7 @@
 /*   By: kbutor-b <kbutor-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:29:37 by kbutor-b          #+#    #+#             */
-/*   Updated: 2023/11/22 17:31:43 by kbutor-b         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:14:20 by kbutor-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*min_int(long long int n)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(unsigned long long n)
 {
 	int		i;
 	char	*str;

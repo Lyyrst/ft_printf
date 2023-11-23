@@ -6,7 +6,7 @@
 /*   By: kbutor-b <kbutor-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:55:07 by kbutor-b          #+#    #+#             */
-/*   Updated: 2023/11/22 17:27:17 by kbutor-b         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:08:20 by kbutor-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	ft_bten(char *nbr, char *b)
 		i++;
 	}
 	while (ft_in_base(nbr[l], b) == 1)
-			l++;
+		l++;
 	while (nbr[i] && ft_in_base(nbr[i], b) == 1)
 	{
 		ret += (ft_basepos(nbr[l-- - 1], b) * ft_power(ft_strlen(b), p++));
