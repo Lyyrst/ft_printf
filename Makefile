@@ -6,7 +6,7 @@
 #    By: kbutor-b <kbutor-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 12:37:19 by kbutor-b          #+#    #+#              #
-#    Updated: 2023/11/23 12:44:04 by kbutor-b         ###   ########.fr        #
+#    Updated: 2023/11/26 17:10:14 by kbutor-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,11 @@ NAME = libftprintf.a
 
 HEADERS = ft_printf.h
 
-CFILES = ft_convert_base.c \
-			ft_convert_base2.c \
-			ft_itoa.c \
+CFILES = ft_strlen.c \
 			ft_printf.c \
 			put.c \
 			print_str.c \
-			print_x.c \
+			print_p.c \
 
 OFILES = $(CFILES:.c=.o)
 

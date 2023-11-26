@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kbutor-b <kbutor-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 14:41:22 by kbutor-b          #+#    #+#             */
-/*   Updated: 2023/11/26 17:12:23 by kbutor-b         ###   ########.fr       */
+/*   Created: 2023/10/30 12:28:15 by kbutor-b          #+#    #+#             */
+/*   Updated: 2023/11/15 20:04:29 by kbutor-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_printf.h"
+#include <stddef.h>
 
-int	main(void)
+size_t	ft_strlen(const char *str)
 {
-	//printf ("np = %d", printf ("lib C :%s\n", "hello"));
-	//ft_printf("%c", 'q');
-	char str[] = "Hello";
-	
-	printf ("\nn = %d\n", ft_printf("This %p is an address from the heap", &str));
-	printf ("\nn = %d", printf("This %p is an address from the heap", &str));
+	size_t	count;
+
+	count = 0;
+	while (str[count])
+		count++;
+	return (count);
 }

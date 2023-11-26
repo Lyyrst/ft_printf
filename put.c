@@ -12,6 +12,13 @@
 
 #include "ft_printf.h"
 
+void	put_upperc(int c, int *n)
+{
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	ft_putchar(c, n);
+}
+
 void	ft_putchar(char c, int *n)
 {
 	(*n)++;
@@ -32,30 +39,40 @@ void	ft_putstr(char *str, int *n)
 		ft_putchar(str[i], n);
 }
 
-void	check_unsigned(int n, int *nb)
+void	ft_putnbr_base(long long int n, char *base, int *nb)
 {
-	if (n < 0)
-		return ;
-	ft_putnbr(n, nb);
-}
+	int	blen;
 
-void	ft_putnbr(int n, int *nb)
-{
-	if (n == -2147483648)
-	{
-		write (1, "-2147483648", 11);
-		return ;
-	}
+	blen = ft_strlen(base);
 	if (n < 0)
 	{
-		write (1, "-", 1);
+		ft_putchar('-', nb);
 		n *= -1;
 	}
-	if (n > 9)
+	if (n >= blen)
 	{
-		ft_putnbr(n / 10, nb);
-		ft_putnbr(n % 10, nb);
+		ft_putnbr_base(n / blen, base, nb);
+		ft_putnbr_base(n % blen, base, nb);
 	}
 	else
-		ft_putchar(n + 48, nb);
+		ft_putchar(base[n], nb);
+}
+
+void	ft_putupper_base(long long int n, char *base, int *nb)
+{
+	int	blen;
+
+	blen = ft_strlen(base);
+	if (n < 0)
+	{
+		ft_putchar('-', nb);
+		n *= -1;
+	}
+	if (n >= blen)
+	{
+		ft_putupper_base(n / blen, base, nb);
+		ft_putupper_base(n % blen, base, nb);
+	}
+	else
+		put_upperc(base[n], nb);
 }
