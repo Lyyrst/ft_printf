@@ -12,13 +12,13 @@
 
 NAME = libftprintf.a
 
-HEADERS = ft_printf.h
+HEADERS = src/ft_printf.h
 
-CFILES = ft_strlen.c \
-			ft_printf.c \
-			put.c \
-			print_str.c \
-			print_p.c \
+CFILES = src/ft_strlen.c \
+			src/ft_printf.c \
+			src/put.c \
+			src/print_str.c \
+			src/print_p.c \
 
 OFILES = $(CFILES:.c=.o)
 
